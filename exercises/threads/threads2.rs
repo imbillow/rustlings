@@ -3,8 +3,6 @@
 // Building on the last exercise, we want all of the threads to complete their work but this time
 // the spawned threads need to be in charge of updating a shared value: JobStatus.jobs_completed
 
-// I AM NOT DONE
-
 use std::sync::Arc;
 use std::thread;
 use std::time::Duration;
@@ -27,8 +25,6 @@ fn main() {
     }
     for handle in handles {
         handle.join().unwrap();
-        // TODO: Print the value of the JobStatus.jobs_completed. Did you notice anything
-        // interesting in the output? Do you have to 'join' on all the handles?
-        println!("jobs completed {}", ???);
+        println!("jobs completed {}", status.jobs_completed);
     }
 }

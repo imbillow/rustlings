@@ -4,9 +4,8 @@
 // Execute `rustlings hint modules2` or use the `hint` watch subcommand for a hint.
 
 mod delicious_snacks {
-    // TODO: Fix these use statements
-    use self::fruits::PEAR as P;
-    use self::veggies::CUCUMBER as C;
+    pub use self::fruits::PEAR as fruit;
+    pub use self::veggies::CUCUMBER as veggie;
 
     mod fruits {
         pub const PEAR: &'static str = "Pear";
